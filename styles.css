@@ -1,0 +1,142 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 13.2px;
+}
+
+.window11_main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.window11_app_place {
+  width: 100%;
+  height: 92%;
+  background-image: url(Asset/window11_bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.window11_menubar {
+  width: 100%;
+  height: 8%;
+  background-color: rgb(53, 51, 51);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  padding: 0 20px;
+  cursor: auto;
+}
+
+.window11_menubar_center ul {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.window11_menubar_center ul li {
+  list-style: none;
+}
+
+.window11_menubar_center ul li svg {
+  width: 30px;
+  height: 30px;
+}
+
+.window11_menubar_app_icon:hover {
+  transition: all 0.2s linear;
+  padding: 5px 5px;
+  background-color: rgba(247, 245, 245, 0.1);
+  border-radius: 5px;
+}
+
+.search {
+  width: 220px;
+  height: 35px;
+  background-color: white;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.search input {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding-left: 30px;
+}
+
+.search i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #207dff;
+  font-size: 17px;
+}
+
+.search img {
+  width: 100px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.right-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: default;
+}
+
+.menu-item {
+  width: 100%;
+  padding: 3px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.menu-item:hover {
+  background-color: rgba(92, 90, 90, 0.1);
+}
+
+.a {
+  width: 17px;
+  height: 17px;
+  background-color: gray;
+  position: relative;
+}
+.b {
+  width: 17px;
+  height: 17px;
+  background-color: white;
+  position: absolute;
+  left: 30%;
+  bottom: 30%;
+}
+.c {
+  width: 10px;
+  height: 10px;
+  background-color: rgb(223, 217, 217);
+  position: inherit;
+  bottom: 0;
+}
