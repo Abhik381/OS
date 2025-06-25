@@ -7,11 +7,16 @@ import {
 import { weatherAPI } from "./weatherAPI.js";
 import { currentTime } from "./time.js";
 
+document.addEventListener("contextmenu", (event) => {
+  event.preventDefault();
+});
+
 const rightMenuOpen = () => {
-  document.addEventListener("contextmenu", (event) => {
-    event.preventDefault();
-    createrightMenu(event.clientX, event.clientY);
-  });
+  document
+    .querySelector(".window11_app_place")
+    .addEventListener("contextmenu", (event) => {
+      createrightMenu(event.clientX, event.clientY);
+    });
 };
 
 const rightMenuClose = () => {
@@ -35,8 +40,8 @@ const getWeather = () => {
         let temp = await weatherAPI(latitude, longitude);
         console.log(temp);
 
-        document.querySelector(".window11_menubar_left").textContent =
-          temp + "°C";
+        document.querySelector(".window11_menubar_left").innerHTML =
+         '<i class="ri-moon-cloudy-line" style="font-size: 30px; margin-right: 10px;"></i>' + temp + "°C" ;
       },
       (error) => {
         console.error(error);
@@ -48,9 +53,9 @@ const getWeather = () => {
 };
 
 const currentTimeDisplay = () => {
-  let { hours, minutes, seconds, day, month, year } = currentTime();
-  document.querySelector(".window11_menubar_right").textContent =
-    hours + ":" + minutes  + "\n" + day + "-" + month + "-" + year;
+  let { hours, minutes, day, month, year } = currentTime();
+  document.querySelector(".timeShow").innerHTML =
+    hours + ":" + minutes + "<br>" + day + "-" + month + "-" + year;
   setInterval(currentTimeDisplay, 1000);
 };
 
